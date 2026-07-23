@@ -1,0 +1,90 @@
+[
+  {
+    "id": "D001",
+    "disease_name": "Hypertension",
+    "description": "A chronic condition characterized by persistently elevated blood pressure.",
+    "common_symptoms": [
+      "Headache",
+      "Dizziness",
+      "Blurred Vision"
+    ],
+    "recommended_active_ingredients": [
+      "Amlodipine",
+      "Lisinopril",
+      "Losartan"
+    ]
+  },
+  {
+    "id": "D002",
+    "disease_name": "Type 2 Diabetes",
+    "description": "A metabolic disorder characterized by insulin resistance and high blood glucose levels.",
+    "common_symptoms": [
+      "Frequent Urination",
+      "Increased Thirst",
+      "Fatigue"
+    ],
+    "recommended_active_ingredients": [
+      "Metformin",
+      "Empagliflozin",
+      "Sitagliptin"
+    ]
+  },
+  {
+    "id": "D003",
+    "disease_name": "Bacterial Infection",
+    "description": "An infection caused by bacteria that requires antibacterial treatment.",
+    "common_symptoms": [
+      "Fever",
+      "Sore Throat",
+      "Cough"
+    ],
+    "recommended_active_ingredients": [
+      "Amoxicillin",
+      "Azithromycin",
+      "Ciprofloxacin"
+    ]
+  },
+  {
+    "id": "D004",
+    "disease_name": "Asthma",
+    "description": "A chronic inflammatory disease affecting the airways.",
+    "common_symptoms": [
+      "Shortness of Breath",
+      "Wheezing",
+      "Chest Tightness"
+    ],
+    "recommended_active_ingredients": [
+      "Salbutamol",
+      "Budesonide",
+      "Montelukast"
+    ]
+  },
+  {
+    "id": "D005",
+    "disease_name": "Migraine",
+    "description": "A neurological disorder causing severe recurrent headaches.",
+    "common_symptoms": [
+      "Severe Headache",
+      "Nausea",
+      "Light Sensitivity"
+    ],
+    "recommended_active_ingredients": [
+      "Sumatriptan",
+      "Ibuprofen",
+      "Paracetamol"
+    ]
+  },
+  {
+    "id": "D006",
+    "disease_name": "Hypercholesterolemia",
+    "description": "High cholesterol levels that increase cardiovascular risk.",
+    "common_symptoms": [
+      "Usually Asymptomatic"
+    ],
+    "recommended_active_ingredients": [
+      "Atorvastatin",
+      "Rosuvastatin",
+      "Ezetimibe"
+    ]
+  }
+]
