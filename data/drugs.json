@@ -40,8 +40,7 @@
       "child": "Not recommended"
     },
     "contraindications": [
-      "Pregnancy",
-      "History of angioedema"
+      "Pregnancy"
     ],
     "drug_interactions": [
       "Potassium supplements",
@@ -116,7 +115,7 @@
     "brand_name": "Amoxil",
     "active_ingredient": "Amoxicillin",
     "drug_class": "Penicillin Antibiotic",
-    "used_for": ["Upper Respiratory Bacterial Infection"],
+    "used_for": ["Bacterial Infection"],
     "available_strengths": ["250 mg", "500 mg", "875 mg"],
     "dosage": {
       "adult": "500 mg every 8 hours",
@@ -144,7 +143,7 @@
     "brand_name": "Zithromax",
     "active_ingredient": "Azithromycin",
     "drug_class": "Macrolide Antibiotic",
-    "used_for": ["Upper Respiratory Bacterial Infection"],
+    "used_for": ["Bacterial Infection"],
     "available_strengths": ["250 mg", "500 mg"],
     "dosage": {
       "adult": "500 mg once daily for 3 days",

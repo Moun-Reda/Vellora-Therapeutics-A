@@ -29,7 +29,7 @@
   },
   {
     "id": "D003",
-    "disease_name": "Upper Respiratory Bacterial Infection",
+    "disease_name": "Bacterial Infection",
     "description": "A bacterial infection affecting the upper respiratory tract.",
     "common_symptoms": [
       "Fever",

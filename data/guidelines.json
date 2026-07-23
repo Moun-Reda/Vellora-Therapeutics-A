@@ -11,7 +11,7 @@
   },
   {
     "rule_id": "R003",
-    "condition": "Diagnosis = Upper Respiratory Bacterial Infection",
+    "condition": "Diagnosis = Bacterial Infection",
     "action": "Recommend one of the available antibiotics (Amoxicillin or Azithromycin)."
   },
   {
