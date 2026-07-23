@@ -2,89 +2,43 @@
   {
     "id": "D001",
     "disease_name": "Hypertension",
-    "description": "A chronic condition characterized by persistently elevated blood pressure.",
+    "description": "A chronic condition characterized by persistently high blood pressure.",
     "common_symptoms": [
       "Headache",
       "Dizziness",
-      "Blurred Vision"
+      "Blurred vision"
     ],
-    "recommended_active_ingredients": [
+    "possible_active_ingredients": [
       "Amlodipine",
-      "Lisinopril",
-      "Losartan"
+      "Lisinopril"
     ]
   },
   {
     "id": "D002",
     "disease_name": "Type 2 Diabetes",
-    "description": "A metabolic disorder characterized by insulin resistance and high blood glucose levels.",
+    "description": "A chronic disease that affects how the body processes blood glucose.",
     "common_symptoms": [
-      "Frequent Urination",
-      "Increased Thirst",
+      "Frequent urination",
+      "Increased thirst",
       "Fatigue"
     ],
-    "recommended_active_ingredients": [
+    "possible_active_ingredients": [
       "Metformin",
-      "Empagliflozin",
-      "Sitagliptin"
+      "Empagliflozin"
     ]
   },
   {
     "id": "D003",
-    "disease_name": "Bacterial Infection",
-    "description": "An infection caused by bacteria that requires antibacterial treatment.",
+    "disease_name": "Upper Respiratory Bacterial Infection",
+    "description": "A bacterial infection affecting the upper respiratory tract.",
     "common_symptoms": [
       "Fever",
-      "Sore Throat",
+      "Sore throat",
       "Cough"
     ],
-    "recommended_active_ingredients": [
+    "possible_active_ingredients": [
       "Amoxicillin",
-      "Azithromycin",
-      "Ciprofloxacin"
-    ]
-  },
-  {
-    "id": "D004",
-    "disease_name": "Asthma",
-    "description": "A chronic inflammatory disease affecting the airways.",
-    "common_symptoms": [
-      "Shortness of Breath",
-      "Wheezing",
-      "Chest Tightness"
-    ],
-    "recommended_active_ingredients": [
-      "Salbutamol",
-      "Budesonide",
-      "Montelukast"
-    ]
-  },
-  {
-    "id": "D005",
-    "disease_name": "Migraine",
-    "description": "A neurological disorder causing severe recurrent headaches.",
-    "common_symptoms": [
-      "Severe Headache",
-      "Nausea",
-      "Light Sensitivity"
-    ],
-    "recommended_active_ingredients": [
-      "Sumatriptan",
-      "Ibuprofen",
-      "Paracetamol"
-    ]
-  },
-  {
-    "id": "D006",
-    "disease_name": "Hypercholesterolemia",
-    "description": "High cholesterol levels that increase cardiovascular risk.",
-    "common_symptoms": [
-      "Usually Asymptomatic"
-    ],
-    "recommended_active_ingredients": [
-      "Atorvastatin",
-      "Rosuvastatin",
-      "Ezetimibe"
+      "Azithromycin"
     ]
   }
 ]

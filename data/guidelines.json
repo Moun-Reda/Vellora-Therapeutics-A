@@ -1,0 +1,32 @@
+[
+  {
+    "rule_id": "R001",
+    "condition": "Diagnosis = Hypertension",
+    "action": "Recommend one of the available antihypertensive medications (Amlodipine or Lisinopril)."
+  },
+  {
+    "rule_id": "R002",
+    "condition": "Diagnosis = Type 2 Diabetes",
+    "action": "Recommend one of the available antidiabetic medications (Metformin or Empagliflozin)."
+  },
+  {
+    "rule_id": "R003",
+    "condition": "Diagnosis = Upper Respiratory Bacterial Infection",
+    "action": "Recommend one of the available antibiotics (Amoxicillin or Azithromycin)."
+  },
+  {
+    "rule_id": "R004",
+    "condition": "Patient has Penicillin Allergy",
+    "action": "Do not recommend Amoxicillin. Recommend Azithromycin instead."
+  },
+  {
+    "rule_id": "R005",
+    "condition": "Patient age >= 65",
+    "action": "Use the elderly dosage defined in the selected drug information."
+  },
+  {
+    "rule_id": "R007",
+    "condition": "Patient is pregnant AND selected drug is Lisinopril",
+    "action": "Do not recommend Lisinopril. Select another suitable medication for Hypertension and advise consultation with a healthcare professional."
+  }
+]

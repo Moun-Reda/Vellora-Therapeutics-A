@@ -1,0 +1,54 @@
+[
+  {
+  "case_id": "C001",
+  "patient_name": "Ahmed Hassan",
+  "age": 45,
+  "gender": "Male",
+  "weight": 82,
+  "diagnosis": "Hypertension",
+  "symptoms": [
+    "Headache",
+    "Dizziness"
+  ],
+  "allergies": [],
+  "current_medications": [],
+  "medical_history": [],
+  "expected_recommendation": "Amlodipine"
+},
+{
+  "case_id": "C002",
+  "patient_name": "Sara Ali",
+  "age": 28,
+  "gender": "Female",
+  "weight": 60,
+  "diagnosis": "Bacterial Infection",
+  "symptoms": [
+    "Fever",
+    "Sore throat"
+  ],
+  "allergies": [
+    "Penicillin"
+  ],
+  "current_medications": [],
+  "medical_history": [],
+  "expected_recommendation": "Azithromycin"
+},
+{
+  "case_id": "C003",
+  "patient_name": "Mohamed Adel",
+  "age": 70,
+  "gender": "Male",
+  "weight": 75,
+  "diagnosis": "Hypertension",
+  "symptoms": [
+    "High blood pressure"
+  ],
+  "allergies": [],
+  "current_medications": [
+    "Simvastatin"
+  ],
+  "medical_history": [],
+  "expected_recommendation": "Lisinopril"
+}
+
+]
