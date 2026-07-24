@@ -39,9 +39,9 @@ def get_possible_drugs(disease_name):
 
 
 def check_allergy(patient, drug):
-    """
-    Check if patient is allergic to the drug.
-    """
+
+    if "brand_name" not in drug:
+        drug = get_drug(drug["active_ingredient"])
 
     allergies = patient.get("allergies", [])
 
@@ -58,6 +58,8 @@ def check_contraindications(patient, drug):
     """
     Check contraindications.
     """
+    if "brand_name" not in drug:
+        drug = get_drug(drug["active_ingredient"])
 
     conditions = patient.get("medical_conditions", [])
 
@@ -76,6 +78,8 @@ def check_interactions(patient, drug):
     """
     Return drug interaction warnings.
     """
+    if "brand_name" not in drug:
+            drug = get_drug(drug["active_ingredient"])
 
     warnings = []
 
@@ -92,7 +96,9 @@ def get_dosage(patient, drug):
     """
     Return suitable dosage according to patient's age.
     """
-
+    if "brand_name" not in drug:
+            drug = get_drug(drug["active_ingredient"])
+    
     age = patient["age"]
 
     if age >= 65:
@@ -106,7 +112,9 @@ def get_dosage(patient, drug):
 
 
 def get_alternative(drug):
-
+    if "brand_name" not in drug:
+            drug = get_drug(drug["active_ingredient"])
+    
     alternative_name = drug["alternative"]
 
     return get_drug(alternative_name)

@@ -309,28 +309,28 @@ def run_agent(question, patient):
 
     return None
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    # Fixed Test Case
+#     # Fixed Test Case
 
-    patient = {
-        "age": 45,
-        "allergies": [],
-        "medical_conditions": [],
-        "current_medications": []
-    }
+#     patient = {
+#         "age": 45,
+#         "allergies": [],
+#         "medical_conditions": [],
+#         "current_medications": []
+#     }
 
-    question = """
-Patient Information:
+#     question = """
+# Patient Information:
 
-Disease: Hypertension
-Age: 45
-Allergies: None
-Medical Conditions: None
-Current Medications: None
+# Disease: Hypertension
+# Age: 45
+# Allergies: None
+# Medical Conditions: None
+# Current Medications: None
 
-Question:
-Recommend the safest medication with dosage.
-"""
+# Question:
+# Recommend the safest medication with dosage.
+# """
 
-    run_agent(question, patient)
+#     run_agent(question, patient)
