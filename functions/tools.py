@@ -2,28 +2,25 @@ from functions.dataloader import diseases, drugs
 
 
 def get_disease(disease_name):
-    """
-    Return disease information by disease name.
-    """
     for disease in diseases:
         if disease["disease_name"].lower() == disease_name.lower():
             return disease
     return None
-    
 
-def get_drug(active_ingredient):
-    """
-    Return drug information using the active ingredient.
-    """
+def get_drug(name):
     for drug in drugs:
-        if drug["active_ingredient"].lower() == active_ingredient.lower():
+        if drug["brand_name"].lower() == name.lower():
             return drug
+
+        if drug["active_ingredient"].lower() == name.lower():
+            return drug
+
     return None
 
 
 def get_possible_drugs(disease_name):
     """
-    Return all drugs that can treat the given disease.
+    Return all drugs names that can treat the given disease.
     """
     disease = get_disease(disease_name)
 
@@ -41,7 +38,6 @@ def get_possible_drugs(disease_name):
     return result
 
 
-
 def check_allergy(patient, drug):
     """
     Check if patient is allergic to the drug.
@@ -49,11 +45,14 @@ def check_allergy(patient, drug):
 
     allergies = patient.get("allergies", [])
 
-    if "Penicillin" in allergies and drug["drug_class"] == "Penicillin Antibiotic":
-        return True
+    active = drug["active_ingredient"].lower()
+    brand = drug["brand_name"].lower()
+
+    for allergy in allergies:
+        if allergy.lower() == active or allergy.lower() == brand:
+            return True
 
     return False
-
 
 def check_contraindications(patient, drug):
     """
@@ -73,7 +72,6 @@ def check_contraindications(patient, drug):
 
     return False
 
-
 def check_interactions(patient, drug):
     """
     Return drug interaction warnings.
@@ -89,7 +87,6 @@ def check_interactions(patient, drug):
             warnings.append(medication)
 
     return warnings
-
 
 def get_dosage(patient, drug):
     """
@@ -108,13 +105,11 @@ def get_dosage(patient, drug):
         return drug["dosage"]["adult"]
 
 
-
 def get_alternative(drug):
 
     alternative_name = drug["alternative"]
 
     return get_drug(alternative_name)
-
 
 
 
@@ -141,7 +136,6 @@ def validate_case(patient):
         return False, "Diagnosis not found."
 
     return True, "Valid case."
-
 
 def recommend_drug(patient):
 

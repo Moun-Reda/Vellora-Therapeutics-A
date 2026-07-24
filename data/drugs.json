@@ -3,7 +3,6 @@
     "drug_id": "DR001",
     "brand_name": "Norvasc",
     "active_ingredient": "Amlodipine",
-    "drug_class": "Calcium Channel Blocker",
     "used_for": ["Hypertension"],
     "available_strengths": ["2.5 mg", "5 mg", "10 mg"],
     "dosage": {
@@ -11,27 +10,16 @@
       "elderly": "2.5 mg once daily",
       "child": "Not recommended"
     },
-    "contraindications": [
-      "Severe hypotension",
-      "Allergy to amlodipine"
-    ],
-    "drug_interactions": [
-      "Simvastatin"
-    ],
-    "common_side_effects": [
-      "Headache",
-      "Dizziness",
-      "Ankle swelling"
-    ],
-    "alternative": "Lisinopril",
-    "requires_prescription": true
+    "contraindications": ["Severe hypotension", "Allergy to amlodipine"],
+    "drug_interactions": ["Simvastatin"],
+    "common_side_effects": ["Headache", "Dizziness", "Ankle swelling"],
+    "alternative": "Lisinopril"
   },
 
   {
     "drug_id": "DR002",
     "brand_name": "Zestril",
     "active_ingredient": "Lisinopril",
-    "drug_class": "ACE Inhibitor",
     "used_for": ["Hypertension"],
     "available_strengths": ["5 mg", "10 mg", "20 mg"],
     "dosage": {
@@ -39,27 +27,16 @@
       "elderly": "5 mg once daily",
       "child": "Not recommended"
     },
-    "contraindications": [
-      "Pregnancy"
-    ],
-    "drug_interactions": [
-      "Potassium supplements",
-      "NSAIDs"
-    ],
-    "common_side_effects": [
-      "Dry cough",
-      "Dizziness",
-      "High potassium level"
-    ],
-    "alternative": "Amlodipine",
-    "requires_prescription": true
+    "contraindications": ["Pregnancy"],
+    "drug_interactions": ["Potassium supplements", "NSAIDs"],
+    "common_side_effects": ["Dry cough", "Dizziness", "High potassium level"],
+    "alternative": "Amlodipine"
   },
 
   {
     "drug_id": "DR003",
     "brand_name": "Glucophage",
     "active_ingredient": "Metformin",
-    "drug_class": "Biguanide",
     "used_for": ["Type 2 Diabetes"],
     "available_strengths": ["500 mg", "850 mg", "1000 mg"],
     "dosage": {
@@ -67,27 +44,16 @@
       "elderly": "500 mg once daily initially",
       "child": "Specialist decision"
     },
-    "contraindications": [
-      "Severe kidney disease",
-      "Metabolic acidosis"
-    ],
-    "drug_interactions": [
-      "Alcohol"
-    ],
-    "common_side_effects": [
-      "Nausea",
-      "Diarrhea",
-      "Stomach discomfort"
-    ],
-    "alternative": "Empagliflozin",
-    "requires_prescription": true
+    "contraindications": ["Severe kidney disease", "Metabolic acidosis"],
+    "drug_interactions": ["Alcohol"],
+    "common_side_effects": ["Nausea", "Diarrhea", "Stomach discomfort"],
+    "alternative": "Empagliflozin"
   },
 
   {
     "drug_id": "DR004",
     "brand_name": "Jardiance",
     "active_ingredient": "Empagliflozin",
-    "drug_class": "SGLT2 Inhibitor",
     "used_for": ["Type 2 Diabetes"],
     "available_strengths": ["10 mg", "25 mg"],
     "dosage": {
@@ -95,26 +61,20 @@
       "elderly": "10 mg once daily",
       "child": "Not recommended"
     },
-    "contraindications": [
-      "Severe kidney disease"
-    ],
-    "drug_interactions": [
-      "Diuretics"
-    ],
+    "contraindications": ["Severe kidney disease"],
+    "drug_interactions": ["Diuretics"],
     "common_side_effects": [
       "Urinary tract infection",
       "Increased urination",
       "Dehydration"
     ],
-    "alternative": "Metformin",
-    "requires_prescription": true
+    "alternative": "Metformin"
   },
 
   {
     "drug_id": "DR005",
     "brand_name": "Amoxil",
     "active_ingredient": "Amoxicillin",
-    "drug_class": "Penicillin Antibiotic",
     "used_for": ["Bacterial Infection"],
     "available_strengths": ["250 mg", "500 mg", "875 mg"],
     "dosage": {
@@ -122,27 +82,16 @@
       "elderly": "500 mg every 8 hours",
       "child": "Dose based on body weight"
     },
-    "contraindications": [
-      "Penicillin allergy"
-    ],
-    "drug_interactions": [
-      "Warfarin",
-      "Methotrexate"
-    ],
-    "common_side_effects": [
-      "Skin rash",
-      "Diarrhea",
-      "Nausea"
-    ],
-    "alternative": "Azithromycin",
-    "requires_prescription": true
+    "contraindications": ["Penicillin allergy"],
+    "drug_interactions": ["Warfarin", "Methotrexate"],
+    "common_side_effects": ["Skin rash", "Diarrhea", "Nausea"],
+    "alternative": "Azithromycin"
   },
 
   {
     "drug_id": "DR006",
     "brand_name": "Zithromax",
     "active_ingredient": "Azithromycin",
-    "drug_class": "Macrolide Antibiotic",
     "used_for": ["Bacterial Infection"],
     "available_strengths": ["250 mg", "500 mg"],
     "dosage": {
@@ -150,20 +99,9 @@
       "elderly": "500 mg once daily for 3 days",
       "child": "Dose based on body weight"
     },
-    "contraindications": [
-      "Severe liver disease",
-      "Macrolide allergy"
-    ],
-    "drug_interactions": [
-      "Digoxin",
-      "Warfarin"
-    ],
-    "common_side_effects": [
-      "Nausea",
-      "Abdominal pain",
-      "Diarrhea"
-    ],
-    "alternative": "Amoxicillin",
-    "requires_prescription": true
+    "contraindications": "Severe liver disease",
+    "drug_interactions": ["Digoxin", "Warfarin"],
+    "common_side_effects": ["Nausea", "Abdominal pain", "Diarrhea"],
+    "alternative": "Amoxicillin"
   }
 ]

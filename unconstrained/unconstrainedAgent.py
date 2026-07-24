@@ -160,31 +160,60 @@ def execute_tool(tool_name, args, patient=None):
     if tool_name == "get_disease":
         return get_disease(args[0])
 
+
+    elif tool_name == "get_drug":
+        return get_drug(args[0])
+
+
     elif tool_name == "get_possible_drugs":
         return get_possible_drugs(args[0])
 
+
     elif tool_name == "get_dosage":
         drug = get_drug(args[0])
+
+        if drug is None:
+            return "Drug not found"
+
         return get_dosage(patient, drug)
+
 
     elif tool_name == "check_allergy":
         drug = get_drug(args[0])
+
+        if drug is None:
+            return "Drug not found"
+
         return check_allergy(patient, drug)
+
 
     elif tool_name == "check_contraindications":
         drug = get_drug(args[0])
+
+        if drug is None:
+            return "Drug not found"
+
         return check_contraindications(patient, drug)
+
 
     elif tool_name == "check_interactions":
         drug = get_drug(args[0])
+
+        if drug is None:
+            return "Drug not found"
+
         return check_interactions(patient, drug)
+
 
     elif tool_name == "get_alternative":
         drug = get_drug(args[0])
+
+        if drug is None:
+            return "Drug not found"
+
         return get_alternative(drug)
+def run_agent(question, patient):
 
-
-def run_agent(question):
     messages = [
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": question},
@@ -194,16 +223,16 @@ def run_agent(question):
 
     for step in range(1, max_steps + 1):
 
-        print(f"\n{'=' * 50}")
+        print("\n" + "=" * 50)
         print(f"STEP {step}")
-        print(f"{'=' * 50}")
+        print("=" * 50)
 
-        # Ask the LLM
+        # Ask LLM
         response = ask_llm(messages)
-        # Prevent the model from inventing Observations
+
+        # Prevent LLM from generating fake observations
         if "Observation:" in response:
             response = response.split("Observation:")[0].strip()
-
 
         print("\nLLM Response:")
         print(response)
@@ -213,74 +242,95 @@ def run_agent(question):
             "content": response
         })
 
-        # Stop if the model produced a final answer
+
+        # Check if final answer exists
         if "Final Answer:" in response:
+
+            answer = response.split("Final Answer:")[-1].strip()
+
             print("\n" + "=" * 50)
             print("FINAL ANSWER")
             print("=" * 50)
-            answer = response.split("Final Answer:")[-1].strip()
 
-            print("\n" + "=" * 60)
-            print("FINAL ANSWER")
-            print("=" * 60)
             print(answer)
-            return
 
-        # Extract tool call
+            return answer
+
+
+        # Extract action
         tool_name, args = extract_action(response)
 
+
         if tool_name is None:
+
             print("\nNo valid Action found.")
 
             messages.append({
                 "role": "user",
                 "content": (
-                    "Observation: Please provide either a valid "
-                    "'Action: tool_name(arguments)' "
-                    "or 'Final Answer:'."
+                    "Observation: "
+                    "No valid action detected. "
+                    "Use format Action: tool_name(arguments) "
+                    "or provide Final Answer."
                 )
             })
 
             continue
 
-        print(f"\nTool Selected : {tool_name}")
-        print(f"Arguments     : {args}")
 
-        # Execute tool
-        observation = execute_tool(tool_name, args)
+        print("\nTool Selected:", tool_name)
+        print("Arguments:", args)
+
+
+        # Execute tool with patient information
+        observation = execute_tool(
+            tool_name,
+            args,
+            patient
+        )
+
 
         if observation is None:
             observation = "No information found."
 
+
         print("\nObservation:")
         print(observation)
 
+
+        # Send observation back to LLM
         messages.append({
             "role": "user",
             "content": f"Observation:\n{observation}"
         })
 
+
     print("\nMaximum reasoning steps reached.")
+
+    return None
 
 if __name__ == "__main__":
 
-    disease = input("Disease: ")
-    age = input("Age: ")
-    allergies = input("Allergies: ")
-    conditions = input("Medical Conditions: ")
-    medications = input("Current Medications: ")
+    # Fixed Test Case
 
-    question = f"""
-Patient Information
+    patient = {
+        "age": 45,
+        "allergies": [],
+        "medical_conditions": [],
+        "current_medications": []
+    }
 
-Disease: {disease}
-Age: {age}
-Allergies: {allergies}
-Medical Conditions: {conditions}
-Current Medications: {medications}
+    question = """
+Patient Information:
+
+Disease: Hypertension
+Age: 45
+Allergies: None
+Medical Conditions: None
+Current Medications: None
 
 Question:
 Recommend the safest medication with dosage.
 """
 
-    run_agent(question)
+    run_agent(question, patient)
