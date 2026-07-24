@@ -9,6 +9,7 @@ def get_disease(disease_name):
         if disease["disease_name"].lower() == disease_name.lower():
             return disease
     return None
+    
 
 def get_drug(active_ingredient):
     """
