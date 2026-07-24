@@ -11,4 +11,3 @@ with open(DATA_DIR / "drugs.json", "r") as f:
 
 with open(DATA_DIR / "guidelines.json", "r") as f:
     guidelines = json.load(f)
-

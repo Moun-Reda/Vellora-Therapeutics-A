@@ -1,7 +1,7 @@
 import os
 from groq import Groq
 from dotenv import load_dotenv
-from categories import CATEGORIES
+from routing.categories import CATEGORIES
 
 load_dotenv()
 

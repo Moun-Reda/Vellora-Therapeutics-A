@@ -1,4 +1,4 @@
-from schema import AgentResponse
+from constrained.schema import AgentResponse
 from groq import Groq
 from dotenv import load_dotenv
 import os
@@ -240,7 +240,7 @@ def run_agent(question):
     "content": response
 })
 
-        from schema import FinalAnswer
+        from constrained.schema import FinalAnswer
 
         if isinstance(parsed.response, FinalAnswer):
             print("\nFINAL ANSWER:")
@@ -282,7 +282,6 @@ Rules:
 
     response = ask_llm(messages)
     print(response)
-    print("Maximum steps reached.")
         
 
 

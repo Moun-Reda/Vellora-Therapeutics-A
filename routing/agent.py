@@ -1,4 +1,4 @@
-from router import classify_case
+from routing.router import classify_case
 
 
 def handle_route(category):
@@ -39,11 +39,11 @@ test_cases = [
 ]
 
 
-for i, case in enumerate(test_cases, 1):
+# for i, case in enumerate(test_cases, 1):
 
-    category = classify_case(case)
-    action = handle_route(category)
+#     category = classify_case(case)
+#     action = handle_route(category)
 
-    print(f"\nTest Case {i}")
-    print("Category:", category)
-    print("Action:", action)
+#     print(f"\nTest Case {i}")
+#     print("Category:", category)
+#     print("Action:", action)

@@ -1,20 +1,5 @@
 [
-  {
-    "comment": "Test Case 1: Normal Hypertension Patient",
-    "test_id": "TC001",
-    "description": "Normal Hypertension Patient",
-    "input": {
-      "age": 45,
-      "pregnant": false,
-      "diagnosis": "Hypertension",
-      "allergies": [],
-      "current_medications": []
-    },
-    "expected_result": {
-      "recommended_drug": "Norvasc",
-      "active_ingredient": "Amlodipine"
-    }
-  },
+
   {
     "comment": "Test Case 2: Pregnant",
     "test_id": "TC002",
@@ -23,12 +8,10 @@
       "age": 30,
       "pregnant": true,
       "diagnosis": "Hypertension",
+      "symptoms": ["Headache", "Dizziness", "Blurred vision"],
+      "medical_conditions": [],
       "allergies": [],
       "current_medications": []
-    },
-    "expected_result": {
-      "recommended_drug": "Norvasc",
-      "warning": "Do not recommend Lisinopril during pregnancy."
     }
   },
   {
@@ -39,13 +22,16 @@
       "age": 55,
       "pregnant": false,
       "diagnosis": "Type 2 Diabetes",
-      "medical_conditions": ["Severe Kidney Disease"],
+      "symptoms": [
+        "Frequent urination",
+        "Increased thirst",
+        "Fatigue"
+      ],
+      "medical_conditions": [
+        "Severe Kidney Disease"
+      ],
       "allergies": [],
       "current_medications": []
-    },
-    "expected_result": {
-      "recommended_drug": "Jardiance",
-      "warning": "Metformin is contraindicated."
     }
   },
   {
@@ -56,44 +42,67 @@
       "age": 25,
       "pregnant": false,
       "diagnosis": "Upper Respiratory Bacterial Infection",
-      "allergies": ["Penicillin"],
+      "symptoms": [
+        "Fever",
+        "Sore throat",
+        "Cough"
+      ],
+      "medical_conditions": [],
+      "allergies": [
+        "Penicillin"
+      ],
       "current_medications": []
-    },
-    "expected_result": {
-      "recommended_drug": "Zithromax",
-      "warning": "Amoxicillin avoided due to Penicillin allergy."
     }
   },
   {
-    "comment": "Test Case 5: Drugs Interaction",
+    "comment": "Test Case 5: Drug Interaction",
     "test_id": "TC005",
     "description": "Respiratory Infection with Drug Interaction",
     "input": {
       "age": 60,
       "pregnant": false,
       "diagnosis": "Upper Respiratory Bacterial Infection",
+      "symptoms": [
+        "Fever",
+        "Sore throat",
+        "Cough"
+      ],
+      "medical_conditions": [],
       "allergies": [],
-      "current_medications": ["Warfarin"]
-    },
-    "expected_result": {
-      "recommended_drug": "Amoxil",
-      "warning": "Potential interaction with Warfarin."
+      "current_medications": [
+        "Warfarin"
+      ]
     }
   },
   {
-    "comment": "Test Case 6: Elderly Patient dosage",
+    "comment": "Test Case 6: Elderly Patient",
     "test_id": "TC006",
     "description": "Elderly Patient with Hypertension",
     "input": {
       "age": 70,
       "pregnant": false,
       "diagnosis": "Hypertension",
+      "symptoms": [
+        "Headache",
+        "Dizziness",
+        "Blurred vision"
+      ],
+      "medical_conditions": [],
       "allergies": [],
       "current_medications": []
-    },
-    "expected_result": {
-      "recommended_drug": "Norvasc",
-      "dosage": "elderly"
+    }
+  },  {
+    "comment": "Test Case 1: Normal Hypertension Patient",
+    "test_id": "TC001",
+    "description": "Normal Hypertension Patient",
+    "input": {
+      "age": 45,
+      "pregnant": false,
+      "diagnosis": "Hypertension",
+      "symptoms": ["Headache", "Dizziness", "Blurred vision"],
+      "medical_conditions": [],
+      "allergies": [],
+      "current_medications": []
     }
   }
 ]

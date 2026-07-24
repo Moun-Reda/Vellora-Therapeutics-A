@@ -54,7 +54,10 @@ class ReactiveAgent:
     def diagnose(self):
         best_match = None
         highest_score = 0
-
+        if "diagnosis" in self.patient:
+                    for disease in self.diseases.values():
+                        if disease["disease_name"] == self.patient["diagnosis"]:
+                            return disease
         for disease in self.diseases.values():
 
             score = sum(

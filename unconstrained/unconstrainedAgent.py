@@ -162,7 +162,7 @@ def execute_tool(tool_name, args, patient=None):
 
 
     elif tool_name == "get_drug":
-        return get_drug(args[0])
+        return get_drug(args[-1])
 
 
     elif tool_name == "get_possible_drugs":
@@ -179,7 +179,7 @@ def execute_tool(tool_name, args, patient=None):
 
 
     elif tool_name == "check_allergy":
-        drug = get_drug(args[0])
+        drug = get_drug(args[-1])
 
         if drug is None:
             return "Drug not found"
@@ -188,7 +188,7 @@ def execute_tool(tool_name, args, patient=None):
 
 
     elif tool_name == "check_contraindications":
-        drug = get_drug(args[0])
+        drug = get_drug(args[-1])
 
         if drug is None:
             return "Drug not found"
@@ -197,7 +197,7 @@ def execute_tool(tool_name, args, patient=None):
 
 
     elif tool_name == "check_interactions":
-        drug = get_drug(args[0])
+        drug = get_drug(args[-1])
 
         if drug is None:
             return "Drug not found"
