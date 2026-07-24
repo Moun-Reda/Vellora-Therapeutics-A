@@ -1,6 +1,5 @@
 This folder contains the Reactive Agent.
 
-This folder contains the Reactive Agent.
 #  Medical Diagnosis Reactive Agent
 
 ## Project Overview
